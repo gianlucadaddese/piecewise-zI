@@ -1,6 +1,6 @@
 # piecewise-zI
 
-##Overview
+## Overview
 
 TO-DO METTERE RIFERIMENTO A ARTICOLO/I
 
@@ -9,7 +9,7 @@ The use of this script is recommended as an alternative to the iterative zI for 
 
 The code is optimized for Python versions 3.6 or higher
 
-##Input
+## Input
 The script can take in input more files at the time. Create a folder called  ``file_to_graph``to fill with all the text files that you want to analyze.
 
 The input files must be generated as follows:
@@ -20,7 +20,7 @@ The input files must be generated as follows:
 
 see ``example.txt`` as an example
 
-##Preprocessing
+## Preprocessing
 
 Before starting with the main script it is required a preprocessing step.
 ```
@@ -32,7 +32,7 @@ After this first step is possible to proceed with the execution of the main scri
 
 "python3 run.py"
 
-##Parameter
+## Parameter
 The program supports the following options
 
 	``-g --gruop`` takes as input an integer which is used to set the maximum size of the groups to be analyzed. The default value is 3.
@@ -45,8 +45,8 @@ Example:
 ```
 Once the run is complete, a folder will be created for each file in input, containing the script output.
 
-##Output
-###Base Outoup
+## Output
+### Base Outoup
 the output is defined as follows:
 
 	- a PNG images representing the network. the color of the node deline the division in community
@@ -57,7 +57,7 @@ the output is defined as follows:
 
 	-directory ``final merge`` directory containing the output of the iterative zI * on the resulting relevant sets of the individual communities to check if there are further possible mergers. The file sequence.txt in this directory contain the final relevant sets of the sistem 
 
-###Iterative output
+### Iterative output
  * The output of  the iterative zI is defined as follo
 
 	- Directory ``results``: Each iteration are stored here indentified with the iteration number.  inside there are 2 text file related to that specific iteration:
