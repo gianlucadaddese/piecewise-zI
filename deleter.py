@@ -1,10 +1,10 @@
 import statistics
 import os
-all_file = os.listdir("files")
+all_file = os.listdir("file_to_graph")
 
 for file in all_file:
 	nome_file = file
-	in_file = open("files/{0}".format(nome_file),"r")
+	in_file = open("file_to_graph/{0}".format(nome_file),"r")
 	
 	
 	observations = []
@@ -34,7 +34,7 @@ for file in all_file:
 		genes_remain.append(g)
 
 
-	out_file = open("files/{0}".format(nome_file),"w")
+	out_file = open("file_to_graph/{0}".format(nome_file),"w")
 	for o in range(len(genes_remain[0])):
 		for g in genes_remain:
 			out_file.write(str(g[o])+"\t")
