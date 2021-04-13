@@ -35,7 +35,7 @@ for file in all_file:
 		if os.path.exists("results") and os.path.isdir("results"):
 			shutil.rmtree("results")
 		os.system("mkdir results")
-		os.system("touch sequence.txt")
+		open("sequence.txt", 'a').close()
 		num = 0
 		exit = 0
 		while(exit <= 1):
@@ -43,6 +43,7 @@ for file in all_file:
 			os.system("mkdir {}".format(num))
 			os.system("python3 calcolate_zI.py {}".format(max_dimension))
 			shutil.copy("file.txt", "{}/".format(num))
+			print(exit)
 			exit = os.system("python3 merger.py {}".format(max_zI))
 			shutil.move("grind.txt", "{}/".format(num))
 			shutil.move("{}/".format(num), "results")
