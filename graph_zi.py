@@ -158,10 +158,6 @@ for ftg in file_to_graph:
 
     com_list_to_print = [len(x) for x in com_list]
     com_list_to_print.sort(reverse=True)
-    with open("community_dimension.txt", "a") as outflen:
-        for c in com_list_to_print:
-            outflen.write("{}\t".format(c))
-        outflen.write("\n")
 
     colormap = [0] * genes_num
 
