@@ -18,7 +18,7 @@ with open("grind.txt")as in1:
 	genes_num = len(genes_name)
 
 	if (genes_num <= 1):
-		exit(-1)
+		exit(3)
 
 	line2 = in1.readline()
 	gene_to_merge = line2.split()[0:genes_num]
@@ -29,7 +29,7 @@ with open("grind.txt")as in1:
 		#	for i in genes_name:
 		#		out.write("{}\t".format(i))
 		#	out.write("{}\n".format(best))
-		exit(-1)
+		exit(3)
 
 with open("file.txt", "r") as f:
 	geni = []
