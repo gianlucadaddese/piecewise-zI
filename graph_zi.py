@@ -193,8 +193,8 @@ for ftg in file_to_graph:
                 final.write("{}_{}\t".format(item[0],item[1]))
             else:
                 to_print =[]
-                name= "{}".format(item).replace(" ","_").replace("'","")
-                name = name [0:250]
+                name= "{}".format(item).replace(" ","_").replace("'","").replace(",","-")
+                name = name [0:100]
                 with open(name,"w") as out:
                     for i in genes:
                         if i in item:
