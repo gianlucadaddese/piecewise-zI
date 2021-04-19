@@ -9,15 +9,19 @@ This method however requires a heavy computational cost in several real-world ca
 
 The reference papers in which the details of the method are presented are:
 
-•	Villani, M., Sani, L., Pecori, R., Amoretti, M., Roli, A., Mordonini, M., Serra R., Cagnoni, S. An iterative information-theoretic approach to the detection of structures in complex systems. Complexity 2018
-•	D’Addese G., Sani L., La Rocca L., Serra R., Villani M. Asymptotic Information-Theoretic Detection of Dynamical Organization in Complex Systems Entropy 2021, 23(4), 398
-•	d’Addese G., Casari M., Serra R., Villani M. A fast and effective method to identify relevant sets of variables in complex systems (submitted)
+Villani, M., Sani, L., Pecori, R., Amoretti, M., Roli, A., Mordonini, M., Serra R., Cagnoni, S. An iterative information-theoretic approach to the detection of structures in complex systems. Complexity 2018
+
+D’Addese G., Sani L., La Rocca L., Serra R., Villani M. Asymptotic Information-Theoretic Detection of Dynamical Organization in Complex Systems Entropy 2021, 23(4), 398
+
+D’Addese G., Casari M., Serra R., Villani M. A fast and effective method to identify relevant sets of variables in complex systems (submitted)
 
 The script takes as input:
-•	a discretized matrix representing the data set - a matrix composed of N variables (the columns) and M observations (the rows) 
--and give as output:
-•	the file sequence.txt within the directory “final merge”, containing the final grouping
-•	a set of files and folders containing intermediate results (see details below)
+
+	- discretized matrix representing the data set - a matrix composed of N variables (the columns) and M observations (the rows) 
+	
+and give as output:
+	- the file sequence.txt within the directory “final merge”, containing the final grouping
+	- set of files and folders containing intermediate results (see details below)
 
 The code is optimized for Python versions 3.6 or higher
 
