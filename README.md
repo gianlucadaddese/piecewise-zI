@@ -19,7 +19,7 @@ The script can take in input more files at the time. Create a folder called  ``f
 
 The input files must be generated as follows:
 
-	- first line containing the sistem element names separated by tabulation. Element names must not contain spaces.
+	- first line containing the sistem element names separated by tabulation. Element names must not contain spaces or "_" (used to divide the relevant set). All the name must be unique
 
 	- other line containing the elements expression values ​​(discretized). The order of the lines is not important. The values ​​on the row must appear in the same order as the elements in the first row.
 
