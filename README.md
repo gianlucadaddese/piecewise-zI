@@ -9,6 +9,11 @@ The use of this script is recommended as an alternative to the iterative zI for 
 
 The code is optimized for Python versions 3.6 or higher
 
+## Requirements
+```
+pip3 install python-louvain
+```
+
 ## Input
 The script can take in input more files at the time. Create a folder called  ``file_to_graph``to fill with all the text files that you want to analyze.
 
@@ -30,7 +35,7 @@ This script searches and eliminates all the columns of the input matrix where va
 
 After this first step is possible to proceed with the execution of the main script. from command line: 
 
-"python3 run.py"
+"python3 graph.py"
 
 ## Parameter
 The program supports the following options
@@ -41,7 +46,7 @@ The program supports the following options
 
 Example:
 ```
-"python3 run.py -g 4 -z 2.7"
+"python3 graph.py -g 4 -z 2.7"
 ```
 Once the run is complete, a folder will be created for each file in input, containing the script output.
 
