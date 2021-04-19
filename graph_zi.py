@@ -223,6 +223,8 @@ for ftg in file_to_graph:
 
 
     all_file = os.listdir("group")
+
+    min = 100000
     with open("post_community.txt","a") as final:
         for dir in all_file:
             with open("group/{}/sequence.txt".format(dir), "r") as f:
@@ -232,6 +234,8 @@ for ftg in file_to_graph:
                     if (float(line.split()[-1]) < max_zI and float(line.split()[-1]) != 0):
                         for i in correct_line.split()[0:-1]:
                             final.write("{}\t".format(i))
+                            if float(correct_line.split()[-1]) < min:
+                                min = float(correct_line.split()[-1])
                         p = 2
                         break
                     else:
@@ -241,7 +245,8 @@ for ftg in file_to_graph:
                 if p==1:
                     for i in correct_line.split()[0:-1]:
                         final.write("{}\t".format(i))
-
+                        if float(correct_line.split()[-1]) < min:
+                                min = float(correct_line.split()[-1])
 
     with open("post_community.txt","r") as final:
         timeline_final = []
@@ -253,6 +258,9 @@ for ftg in file_to_graph:
                 timeline_group.append(trajectory[ind])
             new_gene = union(timeline_group)
             timeline_final.append(new_gene)
+
+    with open ("sequence.txt", "w") as outf:
+        outf.write("{}\t{}\n".format(riga_geni[0:-1],min))
 
     if os.path.exists(ftg) and os.path.isdir(ftg):
         shutil.rmtree(ftg)
