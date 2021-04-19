@@ -20,7 +20,9 @@ The script takes as input:
 	- discretized matrix representing the data set - a matrix composed of N variables (the columns) and M observations (the rows) 
 	
 and give as output:
+
 	- the file sequence.txt within the directory “final merge”, containing the final grouping
+	
 	- set of files and folders containing intermediate results (see details below)
 
 The code is optimized for Python versions 3.6 or higher
