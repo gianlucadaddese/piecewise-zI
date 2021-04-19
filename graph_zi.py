@@ -8,6 +8,7 @@ import sys,getopt
 import shutil
 import subprocess
 from random import random
+from run_zi import *
 
 short_options = "g:z:"
 long_options = ["group=","zi="]
@@ -206,13 +207,19 @@ for ftg in file_to_graph:
                         out.write("\n")
                 shutil.move(name,"./files/{}".format(name))
 
-    subprocess.call('python3 run_zi.py -g {} -z {}'. format(max_dimension, max_zI), shell = True)
+    run_zi(max_dimension,max_zI)
+    #subprocess.call('python3 run_zi.py -g {} -z {}'. format(max_dimension, max_zI), shell = True)
 
     all_file = os.listdir(".")
+
+    if os.path.exists("group") and os.path.isdir("group"):
+        shutil.rmtree("group")
+    os.system("mkdir group")
 
     for dir in all_file:
         if dir.startswith("["):
             shutil.move(dir, "group/{}".format(dir))
+
 
 
     all_file = os.listdir("group")
@@ -264,7 +271,8 @@ for ftg in file_to_graph:
 
     os.mkdir("files")
     shutil.move("final_merge","files/final_merge")
-    subprocess.call('python3 run_zi.py -g {} -z {}'.format(max_dimension, max_zI), shell=True)
+    run_zi(max_dimension, max_zI)
+    #subprocess.call('python3 run_zi.py -g {} -z {}'.format(max_dimension, max_zI), shell=True)
     shutil.move("final_merge","{}/final_merge".format(ftg))
     shutil.move("post_community.txt","{}/".format(ftg))
     shutil.move("graph_{}.png".format(ftg[0:text_to_del]), "{}/".format(ftg))
