@@ -102,4 +102,7 @@ def merge (max_zI):
 		for i in genes_name:
 			out.write("{}\t".format(i))
 		out.write("{}\n".format(best))
-	return 0
+	if genes_num == 2:
+		return 3
+	else: 
+		return 0
