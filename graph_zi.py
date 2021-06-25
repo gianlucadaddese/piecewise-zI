@@ -160,19 +160,8 @@ for ftg in file_to_graph:
     com_list_to_print = [len(x) for x in com_list]
     com_list_to_print.sort(reverse=True)
 
-    colormap = [0] * genes_num
 
-    #use color for community
-    for nodes in com_list:
-        r =(random(), random(), random())
-        for n in nodes:
-
-            colormap[genes.index(n)] = r
-
-
-
-
-    nx.draw_networkx(G, node_color =colormap)
+    nx.draw_networkx(G)
     text_to_del = ftg.rfind('.')
     plt.savefig("graph_{}".format(ftg[0:text_to_del]))
     plt.clf()
